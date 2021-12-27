@@ -1,0 +1,24 @@
+version: "2"
+services:
+  app:
+    image: reactclient
+    build: ./
+    ports:
+      - "3000:3000"
+
+  api:
+    image: flaskapi
+    build: ./api
+    links:
+      - db
+    ports:
+      - "8080:8080"
+
+  db:
+    image: mysql:5.7
+    ports:
+      - "32000:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro

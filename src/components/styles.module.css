@@ -1,0 +1,54 @@
+.universal{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.headingbanner {
+    background-color: lightseagreen;
+    text-align: center;
+    padding: 1rem 2rem 2rem 2rem;
+    margin: 0 0 2rem 0;
+}
+.title {
+    font-size: 3rem;
+    margin:0 0 0.1rem 0;
+}
+.subtitle {
+    font-size: .75rem;
+}
+.flexContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.flexContainer .item {
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    margin: 1rem;
+    padding: 2em;
+    flex-grow: 1;
+    border-radius: 2rem;
+}
+.flexContainer .item input {
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 0;
+}
+.textIn {
+    width: 50%;
+}
+.submitBtn {
+    background-color: lightseagreen;
+    font-weight: bold;
+}
+.urlout {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 2rem;
+    font-weight: normal;
+}
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}

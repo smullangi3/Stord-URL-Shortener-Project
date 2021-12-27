@@ -1,0 +1,13 @@
+Setup:
+Setting up this program requires Docker and Docker-Compose installed. To run the submission, open the terminal and navigate into the project directory. Then run:
+'docker-compose up'
+After this is completed, open a browser of choice and search:
+'http://localhost:3000'
+This should run the URL-minify web application. The UI should be fairly self-explanatory, and URLs can be tested through the left panel with the text input. Once the Generate button is clicked, if the URL starts with 'http(s)://', it is deemed valid and will display a shortened url starting with 'http://localhost:8080/...' on the right hand panel. If deemed invalid, an error message will appear on the bottom of the page, and no url will be generated.
+
+Brief Project Description:
+For this project, I used the React library for handling changes to the front end UI, Flask as an API to exchange information between the client and server, and a mySQL database. Because I wanted to clearly separate back end from front end through using Flask and React independently, I had to consume two separate ports (8080 and 3000) for the back and front end respectively. 
+
+Some Extra Notes:
+On the UI side, I used a flex-box for styling to maintain at least basic functionality on mobile platforms with different window sizes.
+My code-generation in Flask involved generating a random case-sensitive alphanumeric string which was between 6 to 8 characters long. Then, it would be checked with other entries in the database to ensure that it was a new, unique code. This model assumes a relatively smaller amount of users because searching through a database for every code generation takes a significant amount of time.
